@@ -1,12 +1,12 @@
 import React from "react";
-import { Box, Button, ButtonGroup, Text } from "@chakra-ui/react";
+import { Box, Button, Text } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay } from "swiper/modules";
 
-const Slider = () => {
+const Banner = () => {
   return (
     <Box position={"relative"}>
       <Swiper
@@ -20,7 +20,7 @@ const Slider = () => {
           <Box className="banner-main">
             <Box
               position={"absolute"}
-              top={{ base: '130px', sm: "160px", md: "180px", lg: "200px" }}
+              top={{ base: "130px", sm: "160px", md: "180px", lg: "200px" }}
               left={{ base: 8, lg: 20 }}
               width={"404px"}
               display={"flex"}
@@ -127,7 +127,7 @@ const Slider = () => {
           <Box className="banner-main">
             <Box
               position={"absolute"}
-              top={{ base: '130px', sm: "160px", md: "180px", lg: "200px" }}
+              top={{ base: "130px", sm: "160px", md: "180px", lg: "200px" }}
               left={{ base: 10, lg: 20 }}
               width={"404px"}
               display={"flex"}
@@ -232,7 +232,7 @@ const Slider = () => {
           <Box className="banner-main">
             <Box
               position={"absolute"}
-              top={{ base: '130px', sm: "160px", md: "180px", lg: "200px" }}
+              top={{ base: "130px", sm: "160px", md: "180px", lg: "200px" }}
               left={{ base: 10, lg: 20 }}
               width={"404px"}
               display={"flex"}
@@ -339,4 +339,4 @@ const Slider = () => {
   );
 };
 
-export default Slider;
+export default Banner;

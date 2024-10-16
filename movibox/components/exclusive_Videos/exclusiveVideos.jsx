@@ -46,9 +46,9 @@ const ExclusiveVideos = () => {
           },
         }}
       >
-        <Box width={"450px"} height={"253px"}>
+        {/* <Box width={"450px"} height={"253px"}>
           <SwiperSlide className="swp">
-            <video controls>
+            <video key={'key'} controls>
               <source
                 src="/exclusive_videos/obito uchiha.mp4"
                 type="video/mp4"
@@ -68,8 +68,8 @@ const ExclusiveVideos = () => {
               Your Browser does not support the video tag.
             </video>
           </SwiperSlide>
-        </Box>
-
+        </Box> */}
+{/* 
         <Box width={"450px"} height={"253px"}>
           <SwiperSlide className="swp">
             <video controls>
@@ -101,7 +101,7 @@ const ExclusiveVideos = () => {
               Your Browser does not support the video tag.
             </video>
           </SwiperSlide>
-        </Box>
+        </Box> */}
       </Swiper>
     </Box>
   );

@@ -1,6 +1,6 @@
 import { Box, Heading, Text } from "@chakra-ui/react";
 import React from "react";
-import MoviesCard from "../moviesCard/moviesCard";
+import MoviesCard from "./moviesCard";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";

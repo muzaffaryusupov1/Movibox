@@ -1,12 +1,12 @@
 import { Box, Heading, Text } from "@chakra-ui/react";
 import React from "react";
-import MoviesCard from "../moviesCard/moviesCard";
+import MoviesCard from "../movies/moviesCard";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import ArrorRight from "@/public/icons/ArrorRight";
 import Link from "next/link";
-import NewMoviesCard from "../newMoviesCard/newMoviesCard";
+import NewMoviesCard from "./newMoviesCard";
 
 const NewMovies = () => {
   return (
