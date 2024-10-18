@@ -1,108 +1,43 @@
+import ArrorRight from "@/public/icons/ArrorRight";
+import { Box, Heading, Text } from "@chakra-ui/react";
+import Link from "next/link";
 import React from "react";
-import { Box } from "@chakra-ui/react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination, Navigation } from "swiper/modules";
+import ExclusiveVideosCard from "./exclusiveVideosCard";
 
 const ExclusiveVideos = () => {
   return (
-    <Box
-      my={"70px"}
-      display={"flex"}
-      justifyContent={"space-between"}
-      width={"100%"}
-      height={{ base: "205px", md: "250px", lg: "300px" }}
-    >
-      <Swiper
-        slidesPerView={3}
-        spaceBetween={48}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-        breakpoints={{
-          0: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            width: 300,
-          },
-          360: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          570: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-        }}
+    <Box marginTop={'70px'}>
+      <Box
+        fontSize={"30px"}
+        display={"flex"}
+        alignItems={"center"}
+        justifyContent={"space-between"}
       >
-        {/* <Box width={"450px"} height={"253px"}>
-          <SwiperSlide className="swp">
-            <video key={'key'} controls>
-              <source
-                src="/exclusive_videos/obito uchiha.mp4"
-                type="video/mp4"
-              />
-              Your Browser does not support the video tag.
-            </video>
-          </SwiperSlide>
-        </Box>
+        <Heading
+          fontSize={{ base: "18px", md: "24px", lg: "36px" }}
+          fontWeight={"bold"}
+          color={"black"}
+        >
+          Exclusive Videos
+        </Heading>
+        <Link href={"#"}>
+          <Box display={"flex"} alignItems={"center"} gap={1.6}>
+            <Text
+              fontSize={{ base: "14px", md: "16px", lg: "18px" }}
+              fontWeight={"500"}
+              lineHeight={"133%"}
+              color={"#be123c"}
+            >
+              See more
+            </Text>
+            <ArrorRight />
+          </Box>
+        </Link>
+      </Box>
 
-        <Box width={"450px"} height={"253px"}>
-          <SwiperSlide className="swp">
-            <video controls>
-              <source
-                src="/exclusive_videos/boruto and kawaki.mp4"
-                type="video/mp4"
-              />
-              Your Browser does not support the video tag.
-            </video>
-          </SwiperSlide>
-        </Box> */}
-{/* 
-        <Box width={"450px"} height={"253px"}>
-          <SwiperSlide className="swp">
-            <video controls>
-              <source
-                src="/exclusive_videos/sasuke uchiha.mp4"
-                type="video/mp4"
-              />
-              Your Browser does not support the video tag.
-            </video>
-          </SwiperSlide>
-        </Box>
-
-        <Box width={"450px"} height={"253px"}>
-          <SwiperSlide className="swp">
-            <video controls>
-              <source src="/exclusive_videos/toji.mp4" type="video/mp4" />
-              Your Browser does not support the video tag.
-            </video>
-          </SwiperSlide>
-        </Box>
-
-        <Box width={"450px"} height={"253px"}>
-          <SwiperSlide className="swp">
-            <video controls>
-              <source
-                src="/exclusive_videos/obito loniless.mp4"
-                type="video/mp4"
-              />
-              Your Browser does not support the video tag.
-            </video>
-          </SwiperSlide>
-        </Box> */}
-      </Swiper>
+      <Box>
+        <ExclusiveVideosCard/>
+      </Box>
     </Box>
   );
 };

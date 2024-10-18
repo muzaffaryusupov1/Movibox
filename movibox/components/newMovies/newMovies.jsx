@@ -1,6 +1,5 @@
 import { Box, Heading, Text } from "@chakra-ui/react";
 import React from "react";
-import MoviesCard from "../movies/moviesCard";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -10,7 +9,7 @@ import NewMoviesCard from "./newMoviesCard";
 
 const NewMovies = () => {
   return (
-    <Box mt={'130px'}>
+    <Box mt={[0,'70px','130px']}>
       <Box>
         {/* for link */}
         <Box

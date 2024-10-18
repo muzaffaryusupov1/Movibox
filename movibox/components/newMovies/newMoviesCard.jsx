@@ -15,14 +15,18 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Navigation } from "swiper/modules";
-import { moviesCard } from "@/utils/moviesCard";
+import { newMoviesCard } from "@/utils/moviesCard";
 
 const NewMoviesCard = () => {
   return (
-    <Box mt={10} w={"100%"} display={"flex"} justifyContent={"space-between"}>
+    <Box
+      mt={10}
+      marginBottom={"50px"}
+      w={"100%"}
+      display={"flex"}
+      justifyContent={"space-between"}
+    >
       <Swiper
-        // slidesPerView={4}
-        spaceBetween={100}
         className="mySwiper"
         navigation={true}
         modules={[Navigation]}
@@ -30,6 +34,7 @@ const NewMoviesCard = () => {
           0: {
             slidesPerView: 2,
             spaceBetween: 7,
+            autoHeight: true,
           },
           570: {
             slidesPerView: 2,
@@ -49,31 +54,35 @@ const NewMoviesCard = () => {
           },
         }}
       >
-        {moviesCard.map((item, i) => (
+        {newMoviesCard.map((item, i) => (
           <SwiperSlide key={i}>
-            <Card maxW={"250px"} variant={"unstyled"}>
+            <Card maxW={"250px"} height={"auto"} variant={"unstyled"}>
               <Box position={"relative"}>
                 <Image
+                  width={"100%"}
+                  height={"100%"}
                   src={item.image}
                   alt="Green double couch with wooden legs"
                 />
-                <Badge
-                  position={"absolute"}
-                  top={"19px"}
-                  left={"16px"}
-                  fontSize={{ base: "9px", md: "10px", lg: "12px" }}
-                  fontWeight={700}
-                  bg={"rgba(243, 244, 246, 0.5)"}
-                  textColor={"#111827"}
-                  rounded={"12px"}
-                  backdropFilter="auto"
-                  backdropBlur="2px"
-                  py={"3px"}
-                  px={"8px"}
-                  cursor={"pointer"}
-                >
-                  TV SERIES
-                </Badge>
+                {item.tvSeries && (
+                  <Badge
+                    position={"absolute"}
+                    top={"19px"}
+                    left={"16px"}
+                    fontSize={{ base: "9px", md: "10px", lg: "12px" }}
+                    fontWeight={700}
+                    bg={"rgba(243, 244, 246, 0.5)"}
+                    textColor={"#111827"}
+                    rounded={"12px"}
+                    backdropFilter="auto"
+                    backdropBlur="2px"
+                    py={"3px"}
+                    px={"8px"}
+                    cursor={"pointer"}
+                  >
+                    TV SERIES
+                  </Badge>
+                )}
                 <Box position={"absolute"} top={"15px"} right={"16px"}>
                   <Button
                     size={{ base: "xs", md: "xs", lg: "sm" }}

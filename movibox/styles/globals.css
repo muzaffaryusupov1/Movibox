@@ -168,12 +168,12 @@ body {
 .swiper {
   width: 100%;
 }
-
+/* 
 @media screen and (max-width: 500px) {
   .swiper{
     height: 450px;
   }
-}
+} */
 
 .banner-main{
   height: 100vh;
@@ -231,4 +231,53 @@ body {
   height: 253px;
   background: rgba(0, 0, 0, 0.4);
   z-index: 99999999999999;
+}
+
+.swiper-slide.sw{
+  width: auto;
+}
+
+
+.featured-casts{
+  width: 250px;
+  height: 370px;
+}
+
+@media screen and (max-width: 540px) {
+  .featured-casts{
+    width: 220px;
+    height: 320px;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .featured-casts{
+    width: 190px;
+    height: 290px;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  .featured-casts{
+    width: 180px;
+    height: 280px;
+  }
+}
+
+
+@media screen and (max-width: 390px) {
+  .featured-casts{
+    width: 160px;
+    height: 230px;
+  }
+}
+
+
+@media screen and (max-width: 340px) {
+  .featured-casts{
+    width: 100%;
+    height: auto;
+  }
 }
